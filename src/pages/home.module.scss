@@ -26,7 +26,14 @@
     font-size: 1.75rem;
     font-weight: bold;
     color: var(--heading);
+    opacity: 1;
   }
+
+  strong:hover {
+    color: var(--highlight);
+    transition: 0.3s;
+  }
+
 
   p {
     margin-top: 0.5rem;
