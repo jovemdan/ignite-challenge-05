@@ -85,7 +85,7 @@ export default function Home({ postsPagination }: HomeProps) {
   return (
     <>
       <Head>
-        <title>Home | spacetraveling.</title>
+        <title>Home | spacetraveling</title>
       </Head>
       <main className={commonStyles.container}>
         <Header />
@@ -124,7 +124,7 @@ export default function Home({ postsPagination }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient({})
-  const postsResponse = await prismic.getByType('posts', { pageSize: 2 })
+  const postsResponse = await prismic.getByType('posts', { pageSize: 1 })
 
   console.log(postsResponse.results)
 
