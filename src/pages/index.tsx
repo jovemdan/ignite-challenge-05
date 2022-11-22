@@ -92,7 +92,6 @@ export default function Home({ postsPagination }: HomeProps) {
           <a href="">
             <Header />
           </a>
-
         </Link>
 
 
