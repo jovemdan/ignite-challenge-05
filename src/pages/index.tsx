@@ -88,7 +88,13 @@ export default function Home({ postsPagination }: HomeProps) {
         <title>Home | spacetraveling</title>
       </Head>
       <main className={commonStyles.container}>
-        <Header />
+        <Link href='/'>
+          <a href="">
+            <Header />
+          </a>
+
+        </Link>
+
 
         <div className={styles.posts}>
           {posts.map(post => (
@@ -125,9 +131,6 @@ export default function Home({ postsPagination }: HomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient({})
   const postsResponse = await prismic.getByType('posts', { pageSize: 1 })
-
-  console.log(postsResponse.results)
-
   const posts = postsResponse.results.map(post => {
     return {
       uid: post.uid,
